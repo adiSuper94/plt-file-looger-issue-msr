@@ -16,7 +16,15 @@
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
     "logger": {
-      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+      "level": "info",
+      "transport":{
+        "targets":[{
+          "target": "pino/file",
+          "options": {
+            "destination": "~/.logs/report-gen.log"
+          }
+        }]
+      }
     }
   },
   "migrations": {
